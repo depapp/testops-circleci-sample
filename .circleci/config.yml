@@ -71,6 +71,7 @@ jobs:
 
             echo "Executing test"
             xvfb-run -s "-screen 0 $DISPLAY_CONFIGURATION" ./cli-linux-x64 config --server-url https://testops.katalon.io --username $USER_NAME --apikey $API_KEY --organizationid $ORGANIZATION_ID --agent-name $AGENT_NAME
+            ./cli-linux-x64 start-agent
             ret_code=$?
             
             exit $ret_code
