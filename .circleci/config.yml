@@ -15,7 +15,7 @@ parameters:
     default: ""
   server-url:
     type: string
-    default: ""
+    default: "https://testops.katalon.io"
 
 jobs:
   katalon-test:
