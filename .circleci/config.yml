@@ -76,7 +76,7 @@ jobs:
             echo "pwd result"
             $(pwd)
 
-						echo "Exit..."
+	    echo "Exit..."
             ret_code=$?
             exit $ret_code
 
