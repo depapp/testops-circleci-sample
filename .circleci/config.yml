@@ -76,14 +76,16 @@ jobs:
 
             # Menentukan root folder
             ROOT_FOLDER="/agent/tmp"
+            
             # Mencari folder dinamis berdasarkan pola
             DYNAMIC_PATH=$(find "$ROOT_FOLDER" -type d -path "*/Reports" | grep -o ".*/2024.*--[a-zA-Z0-9_-]*/Reports")
+            
             # Mengecek hasil
             if [ -n "$DYNAMIC_PATH" ]; then
-            	echo "Dynamic Path Found: $DYNAMIC_PATH"
-						else
-      				echo "No matching path found."
-						fi
+              echo "Dynamic Path Found: $DYNAMIC_PATH"
+            else
+              echo "No matching path found."
+            fi
 
 workflows:
   version: 2.1
