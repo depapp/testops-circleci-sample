@@ -78,9 +78,8 @@ jobs:
           name: Publish Artifacts
           command: |
             echo "Collecting artifacts for publication..."
-            ls -R /agent/tmp/*/sample-bdd-project-in-katalon-latest-version
             mkdir -p /tmp/artifacts
-            cp -r /agent/tmp/*/sample-bdd-project-in-katalon-latest-version/Reports /tmp/artifacts
+            cp -r $(pwd)/Reports /tmp/artifacts
 
       - store_artifacts:
           path: /tmp/artifacts
