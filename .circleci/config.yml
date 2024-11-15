@@ -70,14 +70,15 @@ jobs:
 
             echo "Executing test"
             xvfb-run -s "-screen 0 $DISPLAY_CONFIGURATION" ./agent start-agent --ci
-            ret_code=$?
-            
-            exit $ret_code
 
             echo "Check latest directories"
             ls -la
             echo "pwd result"
             $(pwd)
+
+						echo "Exit..."
+            ret_code=$?
+            exit $ret_code
 
 workflows:
   version: 2.1
