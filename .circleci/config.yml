@@ -74,6 +74,17 @@ jobs:
             
             exit $ret_code
 
+      - run:
+          name: Publish Artifacts
+          command: |
+            echo "Collecting artifacts for publication..."
+            mkdir -p /tmp/artifacts
+            cp -r /agent/tmp/*/sample-bdd-project-in-katalon-latest-version/Reports /tmp/artifacts
+
+      - store_artifacts:
+          path: /tmp/artifacts
+          destination: katalon-reports
+
 workflows:
   version: 2.1
   build_and_test:
