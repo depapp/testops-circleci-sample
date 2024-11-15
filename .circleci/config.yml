@@ -74,16 +74,10 @@ jobs:
             
             exit $ret_code
 
-      - run:
-          name: Publish Artifacts
-          command: |
-            echo "Collecting artifacts for publication..."
-            mkdir -p /tmp/artifacts
-            cp -r $(pwd)/Reports /tmp/artifacts
-
-      - store_artifacts:
-          path: /tmp/artifacts
-          destination: katalon-reports
+            echo "Check latest directories"
+            ls -la
+            echo "pwd result"
+            $(pwd)
 
 workflows:
   version: 2.1
