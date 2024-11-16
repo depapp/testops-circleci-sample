@@ -75,6 +75,7 @@ jobs:
             ls -la
 
             echo "step 1"
+            pwd
             cd tmp
             ls -la
 
