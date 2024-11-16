@@ -78,6 +78,12 @@ jobs:
             pwd
             cd tmp
             ls -la
+            pwd
+            echo "step lain"
+            cd ..
+            cd ..
+            ls -la
+            pwd
 
       - store_artifacts:
           path: /agent/tmp/
