@@ -75,10 +75,6 @@ jobs:
             ls -la
 
             echo "step 1"
-            cd agent
-            ls -la
-
-            echo "step 2"
             cd tmp
             ls -la
 
