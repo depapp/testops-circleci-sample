@@ -74,19 +74,18 @@ jobs:
             echo "Check latest directories"
             ls -la
 
-            echo "step 1"
-            pwd
-            cd tmp
+            echo "masuk ke log"
+            cd log
             ls -la
-            pwd
+
             echo "step lain"
             cd ..
-            cd ..
+            cd proc
             ls -la
             pwd
 
       - store_artifacts:
-          path: /agent/tmp/
+          path: /log
           destination: katalon-artifact
 
 workflows:
